@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Ventana Emergente Animada</title>
+</head>
+<body>
+    <div class="contenedor">
+        <article>
+            <h1>Ventana Emergente Animada</h1>
+            <button class="btn-abrir-popup" id="btn-abrir-popup">Abrir Ventana Emergente</button>
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolor voluptatum fugiat porro accusamus non amet modi ratione impedit similique.
+            </p>
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolor voluptatum fugiat porro accusamus non amet modi ratione impedit similique.
+            </p>
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolor voluptatum fugiat porro accusamus non amet modi ratione impedit similique.
+            </p>
+        </article>
+
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <h3>SUSCRIBETE</h3>
+                <h4>y recibe un cupon de descuento</h4>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <input type="text" placeholder="Nombre">
+                        <input type="email" placeholder="Correo">
+                    </div>
+                    <input type="submit" class="btn-submit" value="Suscribirse">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var btnAbrirPopup = document.getElementById('btn-abrir-popup');
+        var overlay = document.getElementById('overlay');
+        var popup = document.getElementById('popup');
+        var btnCerrarPopup = document.getElementById('btn-cerrar-popup')
+
+        btnAbrirPopup.addEventListener('click', function() {
+            overlay.classList.add('active');
+            popup.classList.add('active');
+        });
+
+
+        btnCerrarPopup.addEventListener('click', function() {
+            overlay.classList.remove('active');
+            popup.classList.remove('active');
+        });
+
+
+    </script>
+</body>
+</html>
